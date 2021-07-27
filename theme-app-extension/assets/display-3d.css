@@ -1,0 +1,70 @@
+.ar-button-load {
+  background-repeat: no-repeat;
+  background-size: 2px 6px;
+  background-position: 6% 50%;
+  background-color: white;
+  color: #000;
+  border-color: #000;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 10px 9px 9px;
+  font-weight: 300;
+  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+#lazy-load-poster {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#button-load {
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 6% 50%;
+  background-color: #000;
+  border-color: white;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 10px 9px 9px;
+  font-weight: 500;
+  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+model-viewer#interaction {
+  --poster-color: transparent;
+}
+
+page-width
+
+grid
+
+grid__item
+
+grid--1-col
+
+grid--2-col-tablet
+
+grid--3-col-desktop
+
+button
+
+button--primary
+
+button--full-width

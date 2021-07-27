@@ -1,0 +1,30 @@
+{% assign posterImage = models[0].preview_image  %}
+{% assign model_usdz = models[0].sources | where: "format", "usdz" %}
+{% assign source_usdz = model_usdz[0].url %}
+
+
+<div style="text-align: center; padding-bottom: 2rem; " class="grid__item">
+  <div style="text-align: center;">
+    <a style="width: 30rem;">
+      <model-viewer {% if wall_mode == true %}ar-placement="wall"{% endif %} id="first_model_viewer" ar="" ar-modes="quick-look scene-viewer webxr" style="height: 336px; width: 100%; padding-bottom: 2rem;" camera-controls="" reveal="interaction" ios-src="{{ source_usdz }}" src="{{ source }}" alt="A 3D model of a reflective sphere">
+        <div id="lazy-load-poster" style="background-image: url('{{ posterImage.src | product_img_url: 'medium' }}')" slot="poster">
+          <div id="button-load">Load 3D Model</div>
+        </div>
+        <button slot="ar-button" class="button ar-button-load" style="position: absolute;">
+          Activate AR
+        </button>
+      </model-viewer>
+    </a>
+  </div>
+  <a>
+    <h2>{{ product.title }}</h2>
+  </a>
+  <a>
+    <h4>{{ product.price | money_without_trailing_zeros }}</h4>
+  </a>
+  <a style="display: inline-flex;  margin-left: 1rem; margin-right: 1rem;">
+    <button href ="{{ product.url }}" class="button button--primary button--full-width" style="min-width: 24rem; max-width: 27rem;">
+      Purchase Item
+    </button>
+  </a>
+</div>

@@ -1,0 +1,63 @@
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<div class="page-width">
+  <h1>{{ block.settings.heading }}</h1>
+  <p>{{ block.settings.subheading }}</p>
+  <div style="text-align: center; " class="grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
+    {% assign j = 0 %}
+    {% for product in block.settings.collection_3d.products  %}
+      {% assign models = product.media | where: "media_type", "model" %}
+      {% assign source = models[0].sources[0].url %}
+      {% if source != blank %}
+        {% if j < block.settings.max_display_count %}
+            {% render 'display-3d', product: product, models: models, source: source, wall_mode: block.settings.wall_mode_enabled %}
+            {% assign j = j | plus: 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+   </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Immersive Product Display",
+    "target": "section",
+    "stylesheet": "display-3d.css",
+    "templates": [ "index", "product"],
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "3d Display Heading",
+        "default": "Immersive Product Showcase"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "3D Display Subheading",
+        "default": "View our products in 3D and AR!"
+      },
+      {
+        "type": "collection",
+        "id": "collection_3d",
+        "label": "Collection to display"
+      },
+      {
+        "type": "range",
+        "id": "max_display_count",
+        "min": 1,
+        "max": 9,
+        "step": 1,
+        "unit": "ct",
+        "label": "Max. # of items in to display -- provided there are enough models",
+        "default": 6
+      },
+      {
+        "type": "checkbox",
+        "id": "wall_mode_enabled",
+        "label": "Place AR models on Walls",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}
