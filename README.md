@@ -1,5 +1,8 @@
+
 # Immersive-Product-Display
 XR/AR Shopify Theme App Extension Boilerplate for local development of a Node.js Shopify App. The code is boilerplate code for development only (see [details](https://github.com/Shopify/shopify-node-api/blob/main/docs/issues.md)).
+
+![screenshot](https://user-images.githubusercontent.com/79476154/127234831-3aa528a6-7bda-4be4-8220-573a0b046a48.PNG)
 
 This app allows stores to add a custom "Immersive Product Display" to their store. The display takes a specified collection of products, and for each product with an uploaded 3D-model, displays an XR/AR product viewer. 
 
