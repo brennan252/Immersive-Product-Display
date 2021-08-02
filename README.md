@@ -11,7 +11,7 @@ The app also includes a basic React admin with usage instructions for store desi
 ## Set up
 
 ### Create Shopify Local Development App
-Follow this [tutorial](https://shopify.dev/apps/getting-started/create#step-4-install-your-app-on-your-development-store) to create a Shopify App using ngrok and install it on a devlepment store using the Node.js Shopify-CLI command **shopify node create**.
+Follow this [tutorial](https://shopify.dev/apps/getting-started/create#step-4-install-your-app-on-your-development-store) to create a Shopify App using ngrok and install it on a devlopment store using the Node.js Shopify-CLI command **shopify node create**.
 
 ### Register a Theme App Extension
 Using the created app, follow this next [tutorial](https://shopify.dev/apps/online-store/theme-app-extensions/getting-started#scaffold-and-register-a-theme-app-extension) to create and register a Theme App Extension for the app.
